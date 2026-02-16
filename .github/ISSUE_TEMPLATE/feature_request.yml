@@ -1,0 +1,56 @@
+name: Feature Request / 機能リクエスト
+description: Suggest an idea for this project / このプロジェクトのアイデアを提案する
+title: "[Feature]: "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature!
+        新機能の提案ありがとうございます！
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / 問題
+      description: Is your feature request related to a problem? Please describe.
+      placeholder: I'm frustrated when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution / 提案する解決策
+      description: Describe the solution you'd like
+      placeholder: I would like to see...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives / 代替案
+      description: Describe alternatives you've considered
+      placeholder: I have also considered...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context / 追加情報
+      description: Add any other context or screenshots about the feature request
+      placeholder: Any additional information...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contribution / 貢献
+      description: Would you be willing to contribute this feature?
+      options:
+        - label: I am willing to submit a PR for this feature / この機能のPRを提出する意思があります
+          required: false

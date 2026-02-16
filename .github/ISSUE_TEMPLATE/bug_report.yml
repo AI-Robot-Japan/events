@@ -1,0 +1,83 @@
+name: Bug Report / バグ報告
+description: Report a bug to help us improve / バグを報告して改善に協力する
+title: "[Bug]: "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug!
+        バグ報告ありがとうございます！
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description / バグの説明
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the bug...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce / 再現手順
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior / 期待される動作
+      description: What you expected to happen
+      placeholder: Describe what should happen...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior / 実際の動作
+      description: What actually happened
+      placeholder: Describe what actually happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 環境
+      description: |
+        Please provide information about your environment:
+        環境情報を提供してください：
+      value: |
+        - OS: [e.g., macOS 14.0, Windows 11, Ubuntu 22.04]
+        - Browser: [e.g., Chrome 120, Safari 17]
+        - Version: [e.g., 1.0.0]
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / ログ
+      description: If applicable, add logs or error messages
+      placeholder: Paste any relevant logs here...
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context / 追加情報
+      description: Add any other context about the problem here
+      placeholder: Any additional information...
+    validations:
+      required: false
