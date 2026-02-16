@@ -6,8 +6,9 @@ AI・ロボティクスイベント Japanのドキュメントへようこそ！
 ## Contents / 目次
 
 ### Getting Started / はじめに
-- [Quick Start Guide](getting-started.md) - Get up and running quickly / クイックスタートガイド
-- [Installation](installation.md) - Detailed installation instructions / 詳細なインストール手順
+- [Quick Start Guide](quick-start.md) - Get started in minutes / 数分で始める
+- [Claude Code Setup](claude-code-setup.md) - Setting up Claude Code / Claude Codeのセットアップ
+- [Setup Verification](setup-verification.md) - Verify your setup / セットアップの確認
 
 ### User Guides / ユーザーガイド
 - [Event Management](event-management.md) - How to manage events / イベント管理方法
