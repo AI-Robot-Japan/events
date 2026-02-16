@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check file formatting
+        run: |
+          echo "Checking for basic file issues..."
+          # Check for trailing whitespace
+          if grep -r '[[:blank:]]$' --exclude-dir=.git --exclude-dir=node_modules .; then
+            echo "Error: Found trailing whitespace"
+            exit 1
+          fi
+          echo "✓ No trailing whitespace found"
+
+      - name: Validate JSON files
+        run: |
+          echo "Validating JSON files..."
+          for file in $(find . -name "*.json" -not -path "*/node_modules/*" -not -path "*/.git/*"); do
+            echo "Checking $file"
+            if ! python3 -m json.tool "$file" > /dev/null 2>&1; then
+              echo "Error: Invalid JSON in $file"
+              exit 1
+            fi
+          done
+          echo "✓ All JSON files are valid"
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run tests
+        run: |
+          echo "Running tests..."
+          if [ -d "tests" ] && [ "$(ls -A tests)" ]; then
+            echo "Test directory exists and has files"
+            # Add actual test commands here when tests are implemented
+          else
+            echo "✓ No tests to run yet"
+          fi
+
+  docs:
+    name: Documentation Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check documentation
+        run: |
+          echo "Checking documentation..."
+          required_files=("README.md" "CONTRIBUTING.md" "CODE_OF_CONDUCT.md" "LICENSE")
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Error: Required file $file is missing"
+              exit 1
+            fi
+            echo "✓ Found $file"
+          done
+          echo "✓ All required documentation files present"

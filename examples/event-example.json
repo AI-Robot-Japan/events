@@ -1,0 +1,49 @@
+{
+  "id": "example-ai-event-2024",
+  "title": {
+    "ja": "AI技術カンファレンス 2024",
+    "en": "AI Technology Conference 2024"
+  },
+  "description": {
+    "ja": "最新のAI技術とその応用について学べるカンファレンスです。",
+    "en": "A conference to learn about the latest AI technologies and their applications."
+  },
+  "date": {
+    "start": "2024-06-15T09:00:00+09:00",
+    "end": "2024-06-15T18:00:00+09:00"
+  },
+  "location": {
+    "venue": {
+      "ja": "東京国際フォーラム",
+      "en": "Tokyo International Forum"
+    },
+    "address": "〒100-0005 東京都千代田区丸の内3-5-1",
+    "city": "Tokyo",
+    "country": "Japan"
+  },
+  "organizer": {
+    "name": "AI Robot Japan",
+    "contact": "info@ai-robot-japan.example.com",
+    "website": "https://ai-robot-japan.example.com"
+  },
+  "categories": [
+    "AI",
+    "Machine Learning",
+    "Conference"
+  ],
+  "language": [
+    "ja",
+    "en"
+  ],
+  "registration": {
+    "required": true,
+    "url": "https://example.com/register",
+    "deadline": "2024-06-01T23:59:59+09:00",
+    "fee": {
+      "amount": 5000,
+      "currency": "JPY"
+    }
+  },
+  "capacity": 500,
+  "status": "upcoming"
+}

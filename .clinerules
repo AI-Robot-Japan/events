@@ -1,0 +1,47 @@
+# Claude Code Rules / Claude Code ルール
+
+## Project Context / プロジェクトコンテキスト
+
+This repository is for managing AI and robotics events in Japan.
+このリポジトリは、日本のAIとロボティクスイベントを管理するためのものです。
+
+## Coding Guidelines / コーディングガイドライン
+
+### General Principles / 一般原則
+- Write clean, readable, and maintainable code / クリーンで読みやすく、保守可能なコードを書く
+- Follow existing code style and conventions / 既存のコードスタイルと規約に従う
+- Add comments in both Japanese and English when necessary / 必要に応じて日本語と英語の両方でコメントを追加
+- Keep functions small and focused / 関数は小さく、集中させる
+- Use meaningful variable and function names / 意味のある変数名と関数名を使用
+
+### Documentation / ドキュメント
+- Document all public APIs / すべてのパブリックAPIをドキュメント化
+- Include usage examples in documentation / ドキュメントに使用例を含める
+- Keep README.md up to date / README.mdを最新の状態に保つ
+- Write commit messages in English / コミットメッセージは英語で書く
+
+### Testing / テスト
+- Write tests for new features / 新機能のテストを書く
+- Ensure tests pass before committing / コミット前にテストが通ることを確認
+- Maintain test coverage / テストカバレッジを維持
+
+### Security / セキュリティ
+- Never commit sensitive data (API keys, passwords, etc.) / 機密データ（APIキー、パスワードなど）をコミットしない
+- Validate all user inputs / すべてのユーザー入力を検証
+- Follow security best practices / セキュリティのベストプラクティスに従う
+
+## File Organization / ファイル構成
+
+- `/docs` - Documentation files / ドキュメントファイル
+- `/src` - Source code / ソースコード
+- `/tests` - Test files / テストファイル
+- `/examples` - Example code and configurations / サンプルコードと設定
+
+## Language Support / 言語サポート
+
+This project supports both Japanese and English:
+このプロジェクトは日本語と英語の両方をサポートしています:
+
+- Documentation should be bilingual where possible / ドキュメントは可能な限りバイリンガルにする
+- Code comments can be in English / コードのコメントは英語でも可
+- User-facing content should be in Japanese / ユーザー向けコンテンツは日本語にする
