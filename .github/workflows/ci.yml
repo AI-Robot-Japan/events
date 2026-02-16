@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Check file formatting
         run: |
           echo "Checking for basic file issues..."
@@ -22,7 +22,7 @@ jobs:
             exit 1
           fi
           echo "✓ No trailing whitespace found"
-      
+
       - name: Validate JSON files
         run: |
           echo "Validating JSON files..."
@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Run tests
         run: |
           echo "Running tests..."
@@ -56,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Check documentation
         run: |
           echo "Checking documentation..."
